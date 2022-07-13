@@ -118,7 +118,7 @@ import ComponentSnackbar from '../components/Snackbar/Snackbar'
 
 export default {
   name: 'DefaultLayout',
-  // middleware: 'DefaultLayout',
+  middleware: 'DefaultLayoutMiddleware',
   components: {
     ComponentSnackbar
   },

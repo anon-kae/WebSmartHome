@@ -14,15 +14,15 @@ import ComponentSnackbar from '../components/Snackbar/Snackbar'
 
 export default {
   name: 'AnonymousLayout',
-  // middleware: 'UnauthenticatedLayoutMiddleware',
+  middleware: 'UnauthenticatedLayoutMiddleware',
   components: { ComponentSnackbar },
   errorCaptured (error) {
     const errorHandler = async error => {
-      const errorMessage = error.response.data.error.message;
+      const errorMessage = error.message.replace('Firebase:', '');
       await this.$store.dispatch('snackbar/setErrorMessage', errorMessage);
     };
 
-    if (error && error.response) {
+    if (error && error.message) {
       errorHandler(error);
       return false;
     } else if (process.env.SH_CLIENT_NOTIFY_UI_ERROR === 'true') {
