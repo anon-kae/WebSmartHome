@@ -75,7 +75,6 @@
     <v-app-bar
       clipped-left
       class="px-lg-4"
-      color="primary"
       height="60"
       dark
       app
@@ -84,7 +83,7 @@
       <v-spacer />
       <v-menu v-if="$vuetify.breakpoint.mdAndUp" offset-y>
         <template #activator="{ on }">
-          <v-btn color="primary text-capitalize" dark depressed large v-on="on">
+          <v-btn class="text-capitalize" dark depressed large v-on="on">
             <v-avatar class="mr-1" size="36">
               <v-icon>account_circle</v-icon>
             </v-avatar>
@@ -115,9 +114,11 @@
 </template>
 
 <script>
-import ComponentSnackbar from '../components/Snackbar/Snackbar.vue'
+import ComponentSnackbar from '../components/Snackbar/Snackbar'
+
 export default {
   name: 'DefaultLayout',
+  // middleware: 'DefaultLayout',
   components: {
     ComponentSnackbar
   },
