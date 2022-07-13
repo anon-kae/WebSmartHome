@@ -1,6 +1,7 @@
-import { AuthService, ControlService } from '~/services';
-import FirebaseService from '~/services/FirebaseService';
-
+import { getAuth } from 'firebase/auth';
+import { getDatabase } from 'firebase/database';
+import { AuthService } from '../services';
+import FirebaseService from '../services/FirebaseService';
 /**
  * API factory of services
  */
@@ -10,14 +11,18 @@ const apiFactory = (firebaseService, app, store) => {
    */
   const services = {
     authService: AuthService,
-    controlService: ControlService,
+    // controlService: ControlService,
   }
 
   /**
    * construct each service with own firebaseService instance
    */
   for (const [name, ServiceFactory] of Object.entries(services)) {
-    services[name] = ServiceFactory(firebaseService, app, store)
+    const ownService = {
+      auth: getAuth(firebaseService),
+      database: getDatabase(firebaseService)
+    }
+    services[name] = ServiceFactory(ownService, app, store)
   }
 
   return services
