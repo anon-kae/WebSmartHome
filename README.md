@@ -1,4 +1,4 @@
-# smart-control
+# smart-home
 
 ## Build Setup
 
