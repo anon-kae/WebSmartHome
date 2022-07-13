@@ -55,7 +55,9 @@ export default {
   },
   methods: {
     onSubmit () {
-      if (this.$refs.form.validate()) {
+      const validate = this.$refs.form.validate();
+
+      if (validate) {
         this.$emit('submit', this.user, () => {
           this.user = {}
         });
