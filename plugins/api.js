@@ -17,8 +17,7 @@ const apiFactory = (firebaseService, app, store) => {
    * construct each service with own firebaseService instance
    */
   for (const [name, ServiceFactory] of Object.entries(services)) {
-    const ownFirebaseService = firebaseService
-    services[name] = ServiceFactory(ownFirebaseService, app, store)
+    services[name] = ServiceFactory(firebaseService, app, store)
   }
 
   return services
