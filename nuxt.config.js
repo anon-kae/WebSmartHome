@@ -62,7 +62,8 @@ export default {
     STORAGE_BUCKET: process.env.STORAGE_BUCKET,
     MESSAGING_SENDER: process.env.MESSAGING_SENDER,
     APP_ID: process.env.APP_ID,
-    MEASUREMENT_ID: process.env.MEASUREMENT_ID
+    MEASUREMENT_ID: process.env.MEASUREMENT_ID,
+    SH_CLIENT_NOTIFY_UI_ERROR: process.env.SH_CLIENT_NOTIFY_UI_ERROR,
   },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
