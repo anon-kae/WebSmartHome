@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import ComponentAuthLayout from '../components/Auth/AuthLayout';
-import ComponentFormLogin from '../components/Auth/FormLogin';
-import ComponentAuthCard from '../components/Auth/AuthCard';
+import ComponentAuthLayout from '@/components/auth/AuthLayout';
+import ComponentFormLogin from '@/components/auth/FormLogin';
+import ComponentAuthCard from '@/components/auth/AuthCard';
 export default {
   name: 'LoginPage',
   layout: 'anonymous',

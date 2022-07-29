@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ComponentSnackbar from '../components/Snackbar/Snackbar'
+import ComponentSnackbar from '@/components/snackbar/Snackbar'
 
 export default {
   name: 'AnonymousLayout',
