@@ -1,6 +1,6 @@
 import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
-import { AuthService } from '../services';
+import { AuthService, PowerSocketService } from '../services';
 import FirebaseService from '../services/FirebaseService';
 /**
  * API factory of services
@@ -11,7 +11,7 @@ const apiFactory = (firebaseService, app, store) => {
    */
   const services = {
     authService: AuthService,
-    // controlService: ControlService,
+    powerSocketService: PowerSocketService
   }
 
   /**

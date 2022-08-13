@@ -28,44 +28,14 @@
             </v-list-item-title>
           </template>
           <v-list>
-            <v-list-item to="/lab">
+            <v-list-item to="/power-socket">
               <v-list-item-icon>
                 <v-icon>
-                  science
+                  electrical_services
                 </v-icon>
               </v-list-item-icon>
               <v-list-item-title>
-                Lab
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/exam">
-              <v-list-item-icon>
-                <v-icon>
-                  mdi-medal
-                </v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>
-                Exam
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/ip">
-              <v-list-item-icon>
-                <v-icon>
-                  mdi-ip
-                </v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>
-                External IP
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/config">
-              <v-list-item-icon>
-                <v-icon>
-                  mdi-tune-vertical
-                </v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>
-                Config
+                Power socket
               </v-list-item-title>
             </v-list-item>
           </v-list>
@@ -75,6 +45,7 @@
     <v-app-bar
       clipped-left
       class="px-lg-4"
+      color="primary"
       height="60"
       dark
       app
@@ -83,7 +54,7 @@
       <v-spacer />
       <v-menu v-if="$vuetify.breakpoint.mdAndUp" offset-y>
         <template #activator="{ on }">
-          <v-btn class="text-capitalize" dark depressed large v-on="on">
+          <v-btn color="primary text-capitalize" dark depressed large v-on="on">
             <v-avatar class="mr-1" size="36">
               <v-icon>account_circle</v-icon>
             </v-avatar>

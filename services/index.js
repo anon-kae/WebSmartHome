@@ -1,6 +1,7 @@
 import AuthService from './AuthService'
-// import ControlService from './ControlService'
+import PowerSocketService from './PowerSocketService'
 
 export {
-  AuthService
+  AuthService,
+  PowerSocketService
 }
